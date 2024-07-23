@@ -31,3 +31,8 @@ Execute tests
 ```sh
 php artisan test
 ```
+
+Link storage to public folder
+```sh
+php artisan storage:link
+```
