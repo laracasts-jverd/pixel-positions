@@ -1,3 +1,7 @@
 @props(['employer', 'width' => 90])
 
-<img src="{{ asset($employer->logo) }}" alt="" class="rounded-xl" width="{{ $width }}">
+@php
+  $src = $employer->logo ? asset($employer->logo) : "http://picsum.photos/seed/" . rand(0, 999) . "/" . $width;
+@endphp
+
+<img src="{{ $src }}" alt="logo" class="rounded-xl" width="{{ $width }}">

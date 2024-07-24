@@ -8,7 +8,7 @@ class SearchController extends Controller
 {
     public function __invoke()
     {
-        $jobs = Job::width(['employer', 'tags'])
+        $jobs = Job::with(['employer', 'tags'])
             ->where('title', 'LIKE', '%'.request('q').'%')
             ->get();
 

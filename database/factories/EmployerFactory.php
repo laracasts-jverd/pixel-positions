@@ -19,7 +19,6 @@ class EmployerFactory extends Factory
     {
         return [
             'name' => fake()->name,
-            'logo' => fake()->imageUrl(),
             'user_id' => User::factory(),
         ];
     }
